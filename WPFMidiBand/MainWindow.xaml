@@ -26,7 +26,6 @@
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
         </Storyboard>
-        
         <Storyboard x:Key="sbClockClose" x:Name="sbClockClose" Duration="0:0:2">
             <DoubleAnimation From="1.0" To="0.0" 
             Storyboard.TargetName="grdClock"
