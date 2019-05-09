@@ -14,12 +14,11 @@
       1天
 # 五、运行截图
 ![](image/png1.png)
+##  
       通过Open按钮弹出的文件选择对话框打开多个文件，将文件添加到播放列表中,单击其中的某个文件,就会自动播放。三个单选框用来设置列表中文件的播放顺序。新增通过点击Last跟Next，切换正在播放的文件。播放完成之后，会根据单选
 框中选定的播放设置进行播放。如果没有选择单选按钮，默认是单曲循环。
 # 六、结论
     1.通过这次实验，对WPF编程的界面设计进行了学习，我通过Grid将界面分成两列，第一列放新增加的控件，第二列放之前的界面。
 	2.利用ListBox的SelectionChanged事件，可以实现更改了播放列表中的选定项，就播放选中的这个文件。
-	3.实验二的Last跟Next按钮的Click事件写的有点复杂，在这次实验中，我只要在这两个按钮中把ListBox的SelectIndex修改，就会触发
-ListBox的SelectionChanged事件。
-    4.当文件播放完之后，利用异步将播放下一曲的执行代码添加到主界面线程中，这是因为HandlePlayingCompleted代码块不是由主界面线程执行的，而执行
-播放的代码不能由非主界面线程执行，那就利用MainWindow的Dispatcher的BeginInvoke()方法将播放代码块发给主界面线程。
+	3.实验二的Last跟Next按钮的Click事件写的有点复杂，在这次实验中，我只要在这两个按钮中把ListBox的SelectIndex修改，就会触发ListBox的SelectionChanged事件。
+    4.当文件播放完之后，利用异步将播放下一曲的执行代码添加到主界面线程中，这是因为HandlePlayingCompleted代码块不是由主界面线程执行的，而执行播放的代码不能由非主界面线程执行，那就利用MainWindow的Dispatcher的BeginInvoke()方法将播放代码块发给主界面线程。
